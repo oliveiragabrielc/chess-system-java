@@ -17,10 +17,6 @@ public abstract class Piece {
         return board;
     }
 
-    public void setPosition(Position position) {
-        this.position = position;
-    }
-
     @Override
     public String toString(){
         return " Hi, i'm here: " + position;
