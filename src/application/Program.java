@@ -3,18 +3,14 @@ package application;
 import boardgame.Board;
 import boardgame.Piece;
 import boardgame.Position;
+import chess.ChessMatch;
+import chess.ChessPiece;
 
 public class Program {
 
     public static void main(String[] args){
 
-        Position position = new Position(1,1);
-        System.out.println(position);
-        Board board =  new Board(8,8);
-
-       Piece piece = new Piece(board,position);
-        System.out.println(piece);
-
-
+        ChessMatch chessMatch = new ChessMatch();
+        UI.printBoard(chessMatch.getPieces());
     }
 }

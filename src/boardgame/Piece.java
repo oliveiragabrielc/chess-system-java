@@ -1,16 +1,28 @@
 package boardgame;
 
-public class Piece {
+public abstract class Piece {
     protected Position position;
     private Board board;
 
-    public Piece(Board board, Position position) {
-        this.position = position;
+    public Piece(Board board) {
         this.board = board;
+        this.position = null;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    protected Board getBoard() {
+        return board;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
     }
 
     @Override
     public String toString(){
-        return "Board: " + board + " Position: " + position;
+        return " Hi, i'm here: " + position;
     }
 }
